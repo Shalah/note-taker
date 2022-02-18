@@ -1,3 +1,5 @@
+// Dependencies 
+
 const express = require('express')
 const fs = require('fs')
 const path = require('path')
@@ -7,6 +9,11 @@ const PORT = process.env.port || 3001;   // Find any port for my work or give me
 
 // Middleware
 app.use(express.json())
+app.use(express.static('public'));
+app.use(express.urlencoded({ extended: true }));
+
+//app.use('/api', api);
+
 
 //Route for homepage
 app.get('/', (req, res) =>

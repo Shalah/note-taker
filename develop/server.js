@@ -18,7 +18,13 @@ app.use(express.urlencoded({ extended: true }));
 //app.use('/api', api);
 
 
+app.get('/notes', (req, res) => 
+    res.sendFile(path.join(__dirname, '/public/notes.html'))
+)
 
+app.get('/index', (req, res) => 
+    res.sendFile(path.join(__dirname, '/public/index.html'))
+);
 
 
 // Event listener on the port

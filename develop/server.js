@@ -6,6 +6,10 @@ const path = require('path')
 const app = express();  // creating a server using express
 const PORT = process.env.port || 3001;   // Find any port for my work or give me port 3001
 
+// Routes
+const apiRoutes = require('./public/routes/apiRoute');
+const htmlRoutes = require('./public/routes/htmlRoutes');
+
 // Middleware
 app.use(express.json())
 app.use(express.static('public'));
@@ -13,9 +17,7 @@ app.use(express.urlencoded({ extended: true }));
 
 //app.use('/api', api);
 
-// Routes
-//const apiRoutes = require('');
-const htmlRoutes = require('./public/routes/htmlRoutes');
+
 
 
 

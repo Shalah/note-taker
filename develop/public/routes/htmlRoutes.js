@@ -3,6 +3,9 @@ const path = require("path");
 const express = require('express')
 const app = express();
 
+const hr = require('express').Router();
+// const { v4: uuidv4 } = require('uuid'); // Importing this npm package for id
+
 
 // HTML GET Requests
 // Below code handles when users 'visit' a page.
@@ -23,3 +26,5 @@ app.get('*', (req, res) =>
 // app.get('*', (req, res) =>
 // res.sendFile(path.join(__dirnmane, '/public/page/404.html'))
 // );
+
+module.exports = hr;
